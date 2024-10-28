@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco della Morra Cinese</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="points">
+        <div class="player_pt">
+            <h2>Player</h2>
+            <p>0</p>
+        </div>
+        <div class="system_pt">
+            <h2>System</h2>
+            <p>0</p>
+        </div>
+        <button id="rules-button" onclick="openSlidebar()">Visualizza Regole</button>
+    </header>
+
+    <main>
+
+        <section class="Game">
+            <div class="start">
+                <h1>Sasso, Carta o Forbice?</h1>
+                <button>Iniza a Giocare</button>
+            </div>
+        </section>
+
+        <section class="vs gameout">
+            <h2 class="ps_win">Fai la tua scelta:</h2>
+            <div class="check">
+                <button class="roccia">Sasso</button>
+                <button class="carta">Carta</button>
+                <button class="forbice">Forbice</button>
+            </div>
+            <div class="launch">
+                <img class="player_game" src="./img/carta.png">
+                <img class="system_game" src="./img/carta.png">
+            </div>
+        </section>
+
+        <section class="ps_winned gameout">
+            <h2 class="ps_win_stop"></h2>
+            <button>Ricomincia il gioco</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gioco della Morra Cinese By FrancescoSommellaa &copy; 2024</p>
+    </footer>
+
+    <!-- Slidebar -->
+    <div id="rules-slidebar" class="slidebar">
+        <a href="javascript:void(0)" onclick="closeSlidebar()">&times;</a>
+        <div class="slidebar-content">
+            <h2>Morra Cinese - Descrizione</h2>
+            <p>La morra cinese è un gioco in cui due partecipanti scelgono una delle tre opzioni: sasso, carta o
+                forbice. Il vincitore è deciso in base alle seguenti regole:</p>
+            <ul>
+                <li>Sasso batte Forbice</li>
+                <li>Forbice batte Carta</li>
+                <li>Carta batte Sasso</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+/* General Styling */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
+    color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #00d9ff;
+    text-shadow: 0px 0px 10px #00d9ff, 0px 0px 20px #00d9ff;
+    letter-spacing: 2px;
+}
+
+/* Header Points Styling */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #00d9ff;
+}
+
+.player_pt, .system_pt {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #00d9ff;
+}
+
+.player_pt p, .system_pt p {
+    font-size: 24px;
+    color: #ffae00;
+}
+
+#rules-button {
+    background: #ff0066;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 15px #ff0066;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#rules-button:hover {
+    background: #ff3399;
+}
+
+/* Game Start Section */
+.start button {
+    background: #00ff66;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 20px #00ff66;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start button:hover {
+    background: #00cc52;
+}
+
+/* VS Section */
+.vs h2 {
+    color: #ff0066;
+}
+
+.check button {
+    background: linear-gradient(135deg, #ff0066, #ffae00);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 18px;
+    box-shadow: 0px 0px 20px rgba(255, 0, 102, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.check button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px rgba(255, 0, 102, 1);
+}
+
+/* Game Icons */
+.launch img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    transition: transform 0.5s;
+}
+
+.player_game {
+    transform: rotateY(180deg);
+}
+
+.sistem_game {
+    transform: rotateY(0deg);
+}
+
+/* Win Section */
+.ps_winned h2 {
+    color: #00ff66;
+    text-shadow: 0px 0px 10px #00ff66, 0px 0px 20px #00ff66;
+}
+
+.ps_winned button {
+    background: #ff0066;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 20px #ff0066;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ps_winned button:hover {
+    background: #ff3399;
+}
+
+/* Slidebar */
+/* Slidebar as Popup */
+#rules-slidebar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background: rgba(15, 12, 41, 0.95);
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 217, 255, 0.7);
+    color: #fff;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+#rules-slidebar.popup-active {
+    opacity: 1;
+}
+
+#rules-slidebar a {
+    color: #ff0066;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#rules-slidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#rules-slidebar ul li {
+    background: rgba(255, 174, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0px 0px 10px rgba(255, 174, 0, 0.7);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00d9ff;
+    text-shadow: 0px 0px 10px #00d9ff;
+    border-top: 2px solid #00d9ff;
+}
+
+.gameout {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gamein {
+    opacity: 1;
+    transition: opacity 0.5s;
+    pointer-events: all;
+}
